@@ -18,7 +18,7 @@ class Filter implements Arrayable
     ) {
     }
 
-    public function toArray()
+    public function toArray(): array
     {
         $options = $this->options;
 

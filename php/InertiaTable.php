@@ -40,7 +40,7 @@ class InertiaTable
      * @param bool|string $label
      * @return void
      */
-    public static function defaultGlobalSearch(bool|string $label = 'Search...')
+    public static function defaultGlobalSearch(bool|string $label = 'Search...'): void
     {
         static::$defaultGlobalSearch = $label !== false ? __($label) : false;
     }
@@ -66,7 +66,7 @@ class InertiaTable
      * @param string $name
      * @return void
      */
-    public static function updateQueryBuilderParameters(string $name)
+    public static function updateQueryBuilderParameters(string $name): void
     {
         if (empty(static::$defaultQueryBuilderConfig)) {
             static::$defaultQueryBuilderConfig = config('query-builder.parameters');

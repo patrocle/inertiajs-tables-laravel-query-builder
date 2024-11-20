@@ -7,7 +7,7 @@ use Inertia\Response as InertiaResponse;
 
 class InertiaTableServiceProvider extends ServiceProvider
 {
-    public function boot()
+    public function boot(): void
     {
         InertiaResponse::macro('getQueryBuilderProps', function () {
             return $this->props['queryBuilderProps'] ?? [];
